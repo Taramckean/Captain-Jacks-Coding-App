@@ -1,18 +1,18 @@
 import React from 'react'
 import Question from './Question.js'
+import mockLessonData from '../mock_lessonData.js'
 
 class Lesson extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      topic: null
+      topic: mockLessonData
     };
-
   }
 
-  componentDidMount(){
-    this.fetchTopic()
-  }
+  // componentDidMount(){
+  //   this.fetchTopic()
+  // }
   // fetchTopic(event){
   //   if(event)
   //   {
