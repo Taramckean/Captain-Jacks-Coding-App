@@ -1,4 +1,5 @@
 import React from 'react'
+import Question from './Question.js'
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -12,15 +13,15 @@ class Lesson extends React.Component {
   componentDidMount(){
     this.fetchTopic()
   }
-  fetchTopic(event){
-    if(event)
-    {
-      event.preventDefault();
-    }
-    // fetch('enter api')
-    .then(response => response.json())
-    .then(topic => this.setState({topic: topic}));
-  }
+  // fetchTopic(event){
+  //   if(event)
+  //   {
+  //     event.preventDefault();
+  //   }
+  //   // fetch('enter api')
+  //   .then(response => response.json())
+  //   .then(topic => this.setState({topic: topic}));
+  // }
 
   render(){
     if(this.state.topic){
@@ -38,4 +39,4 @@ class Lesson extends React.Component {
 
 }
 
-default export Lesson
+export default Lesson

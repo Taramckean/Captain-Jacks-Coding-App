@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Home from "../containers/Home";
 import Lessons from "../containers/Lessons";
-import Lessonn from "../containers/Lesson";
+import Lesson from "../containers/Lesson";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Main extends Component{
