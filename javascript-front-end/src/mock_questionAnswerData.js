@@ -1,5 +1,6 @@
 const mockQuestionAnswerData =
-  [{
+  [
+    {
     id: 0,
     question: "make a gettings for captain jack by touching the buttons in the right order ",
 
