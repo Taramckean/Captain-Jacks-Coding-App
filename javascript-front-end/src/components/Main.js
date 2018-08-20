@@ -10,14 +10,13 @@ class Main extends Component{
   render(){
     return(
       <Router>
-      <React.Fragment>
-        <Navbar/>
-        <Route exact path="/" component={Home}/>
-        <Route path="/about" component={About}/>
-        <Route path="/lessons" component={Lessons}/>
-        <Route path="/lesson" component={Lesson}/>
-
-      </React.Fragment>
+        <React.Fragment>
+          <Navbar/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/lessons" component={Lessons}/>
+          <Route path="/lesson" component={Lesson}/>
+        </React.Fragment>
       </Router>
     )
   }

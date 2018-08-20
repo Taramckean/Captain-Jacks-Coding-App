@@ -1,6 +1,7 @@
 import React from 'react'
 import Question from './Question.js'
 import mockLessonData from '../mock_lessonData.js'
+import RunButton from '../components/RunButton.js'
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -29,10 +30,11 @@ class Lesson extends React.Component {
     }
     return (
       <React.Fragment>
-      <div id="topic-view">
-        <p id="topic">{this.state.topic.topic}</p>
-      </div>
-      <Question/>
+        <div id="topic-view">
+          <p id="topic">{this.state.topic.topic}</p>
+        </div>
+        <Question/>
+        <RunButton/>
       </React.Fragment>
     );
   }
