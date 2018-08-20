@@ -33,13 +33,11 @@ class FunctionContainer extends React.Component {
     if(!this.state.AnswerParts){
       return null;
     }
-    const answerParts = this.state.AnswerParts.answers.map((answerPart, index) => <li key={index}><AnswerButton buttonText={answerPart}>
-     {answerPart}
-   </AnswerButton>
-
+    // console.log(this.state.AnswerParts.answers);
+    const answerParts = this.state.AnswerParts.answers.map((answerPart, index) => <li>
+      <AnswerButton functionOrder={index} buttonText={answerPart}>{answerPart}</AnswerButton>
     </li>
-
-  )
+    )
   // debugger;
 
     return (

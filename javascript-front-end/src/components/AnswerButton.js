@@ -9,33 +9,53 @@ class AnswerButton extends React.Component {
       buttonClicked: false
     }
     this.renderAnswer = this.renderAnswer.bind(this);
+    // console.log(props.buttonText);
+    // console.log(props.functionOrder);
   }
 
   renderAnswer(event) {
+
     if(this.state.buttonClicked === false){
 
       let list = document.getElementById("matching-answers");
       let matchingAnswer = document.createElement('li');
       matchingAnswer.innerText = event.target.innerText;
-
       matchingAnswer.setAttribute("id", matchingAnswer.innerText);
-
+      matchingAnswer.setAttribute("title", this.props.functionOrder);
       list.appendChild(matchingAnswer);
       this.setState({
         buttonClicked: true
       })
-      console.log("it made an li")}
 
+
+      var listItem = list.getElementsByTagName("li");
+
+      for (var i=0; i < listItem.length; i++) {
+        console.log("title:" + listItem[i].title );
+        console.log("i:" + i );
+        if(parseInt(listItem[i].title) === i){
+          console.log('here');
+          listItem[i].style.background = "green";
+          // let answer = document.getElementByTitle(i)
+          // answer.style.background = "lightgreen";
+        }else {
+          listItem[i].style.background = "red";
+          // answer.style.background = "red";
+        }
+      }
+
+
+
+    }
     else{
 
       let list = document.getElementById("matching-answers");
       let selectedAnswer = document.getElementById(event.target.innerText)
       list.removeChild(selectedAnswer);
-
       this.setState({
         buttonClicked:false
       })
-      console.log("cleared");
+
     }
   }
 
