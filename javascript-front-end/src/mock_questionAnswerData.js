@@ -19,18 +19,18 @@ const mockQuestionAnswerData =
 
     answers: ['function addGoldCoins(CaptainJacksGold, PirateJoesGold){', 'return CaptainJacksGold + PirateJoesGold + " Gold Coins"', 'addGoldCoins(6, 7)'],
 
-    story: "After landing on OopyLoopy Island, Captain Jack and Pirate Joe decided to split up and find as many gold coins as possible. The two pirate meet back up and Captain Jack would like to add their gold together so he can add it to the chest on the ship."
+    story: "After landing on OopyLoopy Island, Captain Jack and Pirate Joe decided to split up and find as many gold coins as possible. The two pirate meet back up and Captain Jack would like to add their gold together so he can add it to the chest on the ship.",
 
     result: "13 Gold Coins"
   },
   {
     id: 2,
 
-    question: "make a function that lets Captain Jack and Pirate Joe to rejoin the Swally Galley"
+    question: "make a function that lets Captain Jack and Pirate Joe to rejoin the Swally Galley",
 
-    answers: ['const ship = ["Blackbeard", "Scurvy Legs", "Billy Bones"]', 'ship.push("Captain Jack")', "ship.push(' Pirate Joe')", "p ship"]
+    answers: ['const ship = ["Blackbeard", "Scurvy Legs", "Billy Bones"]', 'ship.push("Captain Jack")', "ship.push(' Pirate Joe')", "p ship"],
 
-    story: "After successfully finding gold coins on OopyLoopy Island Captain Jack and Pirate Joe make their way back to the ship to add their gold to the pirate treasure chest."
+    story: "After successfully finding gold coins on OopyLoopy Island Captain Jack and Pirate Joe make their way back to the ship to add their gold to the pirate treasure chest.",
 
     result: '[Blackbeard", "Scurvy Legs", "Billy Bones", "Captain Jack", "Pirate Joe"]'
   },

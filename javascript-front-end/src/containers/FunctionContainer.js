@@ -1,7 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 import AnswerButton from '../components/AnswerButton'
-import mockQuestionAnswerData from '../mock_questionAnswerData.js'
+
 
 
 
@@ -9,10 +9,10 @@ class FunctionContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      AnswerParts: mockQuestionAnswerData[0]
+      AnswerParts: null
     };
-    // this.renderAnswer = this.renderAnswer.bind(this)
-
+  //   this.fetchAnswerParts = this.fetchAnswerParts.bind(this)
+  //
   }
   //
   // componentDidMount(){
@@ -23,24 +23,14 @@ class FunctionContainer extends React.Component {
   //   {
   //     event.preventDefault();
   //   }
-  //   // fetch('enter api')
+  //   fetch('http://localhost:3001/lessons')
   //   .then(response => response.json())
   //   .then(AnswerParts => this.setState({AnswerParts: AnswerParts}));
   // }
 
 
   render(){
-    if(!this.state.AnswerParts){
-      return null;
-    }
-    const answerParts = this.state.AnswerParts.answers.map((answerPart, index) => <li key={index}><AnswerButton buttonText={answerPart}>
-     {answerPart}
-   </AnswerButton>
-
-    </li>
-
-  )
-  // debugger;
+    const answerParts = this.props.functionLines.map((answerPart, index) => <li key={index}><AnswerButton buttonText={answerPart} /></li>)
 
     return (
       <React.Fragment>
