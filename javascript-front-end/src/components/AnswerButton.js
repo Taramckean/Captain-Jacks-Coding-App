@@ -9,42 +9,61 @@ class AnswerButton extends React.Component {
       buttonClicked: false
     }
     this.renderAnswer = this.renderAnswer.bind(this);
+    // console.log(props.buttonText);
+    // console.log(props.functionOrder);
   }
 
   renderAnswer(event) {
+
     if(this.state.buttonClicked === false){
-    let list = document.getElementById("matching-answers");
-    let matchingAnswer = document.createElement('li');
-    matchingAnswer.id= 'li';
-    matchingAnswer.innerText = event.target.innerText;
-    list.appendChild(matchingAnswer);
-    this.setState({
-      buttonClicked: true
-    })
-  console.log("it made an li")
-  console.log(this.state.buttonClicked)}
+
+      let list = document.getElementById("matching-answers");
+      let matchingAnswer = document.createElement('li');
+      matchingAnswer.innerText = event.target.innerText;
+      matchingAnswer.setAttribute("id", matchingAnswer.innerText);
+      matchingAnswer.setAttribute("title", this.props.functionOrder);
+      list.appendChild(matchingAnswer);
+      this.setState({
+        buttonClicked: true
+      })
+
+
+      var listItem = list.getElementsByTagName("li");
+
+      for (var i=0; i < listItem.length; i++) {
+        console.log("title:" + listItem[i].title );
+        console.log("i:" + i );
+        if(parseInt(listItem[i].title) === i){
+          console.log('here');
+          listItem[i].style.background = "green";
+          // let answer = document.getElementByTitle(i)
+          // answer.style.background = "lightgreen";
+        }else {
+          listItem[i].style.background = "red";
+          // answer.style.background = "red";
+        }
+      }
+    }
     else{
-      // get the specifc li created by the specific button click
-      let list = document.getElementById("matching-answers")
-      let listItem = document.getElementById('li');
-        console.log(listItem);
-      // for (listItem of list){ if (listItem.id === 'li'){
-        //clear the li
-        list.removeChild(listItem);
-        // list.innerText = "";
+
+      let list = document.getElementById("matching-answers");
+      let selectedAnswer = document.getElementById(event.target.innerText)
+      list.removeChild(selectedAnswer);
       this.setState({
         buttonClicked: false
       })
-      console.log("cleared");
-      console.log(this.state.buttonClicked);
+
     }
 }
 
   render(){
-  return(
-  <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
+    return(
+      <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
+
   )
 }
+
+
 }
 
 export default AnswerButton;

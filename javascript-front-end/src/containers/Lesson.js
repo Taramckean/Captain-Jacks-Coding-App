@@ -1,6 +1,7 @@
 import React from 'react'
 import Question from './Question.js'
 import './Lesson.css';
+import ClearAllButton from '../components/ClearAllButton'
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Lesson extends React.Component {
         <p id="topic">Hello</p>
       </div>
       <Question lesson={this.state.lesson}/>
+      <ClearAllButton/>
       </React.Fragment>
     );
   }

@@ -29,7 +29,8 @@ class FunctionContainer extends React.Component {
 
 
   render(){
-    const answerParts = this.props.functionLines.map((answerPart, index) => <li key={index}><AnswerButton buttonText={answerPart} /></li>)
+    const answerParts = this.props.functionLines.map((answerPart, index) => <li key={index}><AnswerButton buttonText={answerPart} functionOrder={index}></AnswerButton></li>)
+
 
     return (
       <React.Fragment>
