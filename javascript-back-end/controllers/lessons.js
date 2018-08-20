@@ -1,19 +1,19 @@
-var express = require('express')
-var lessonRouter = new express.Router();
+const express = require('express')
+const lessonRouter = new express.Router();
 
-var lessons = ["lesson1", "lesson2", "lesson3"]; //NEW
+
 
 lessonRouter.get('/', function (req, res) {
-  // const db = req.app.get("db");
-  // const lessons = db.collection("lessons");
-  // lessons.find().toArray(function(err, lessonObjects){
-  //     if(err) {
-  //         console.log(err);
-  //         res.status(500)
-  //         res.send();
-  //     }
-      res.json(lessons);
-  // });
+  const db = req.app.get("db");
+  const lessons = db.collection("lessons");
+  lessons.find().toArray(function(err, lessonObjects){
+      if(err) {
+          console.log(err);
+          res.status(500)
+          res.send();
+      }
+      res.json(lessonObjects);
+  });
 });
 
 lessonRouter.get('/:id', function (req, res){
