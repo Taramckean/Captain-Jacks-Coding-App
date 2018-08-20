@@ -1,6 +1,7 @@
 import React from 'react'
 import Question from './Question.js'
 import mockLessonData from '../mock_lessonData.js'
+import './Lesson.css';
 
 class Lesson extends React.Component {
   constructor(props) {

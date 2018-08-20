@@ -4,6 +4,7 @@ import About from "./About";
 import Home from "../containers/Home";
 import Lessons from "../containers/Lessons";
 import Lesson from "../containers/Lesson";
+import SuccessContainer from "../containers/SuccessContainer";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Main extends Component{
@@ -16,7 +17,7 @@ class Main extends Component{
         <Route path="/about" component={About}/>
         <Route path="/lessons" component={Lessons}/>
         <Route path="/lesson" component={Lesson}/>
-
+        <Route path="/success" component={SuccessContainer}/>
       </React.Fragment>
       </Router>
     )

@@ -1,0 +1,45 @@
+.lesson-list{
+  text-align: center;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.errorVideo{
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom: 10px;
+padding-top:5px;
+margin: auto;
+display: flex;
+justify-content: center;
+margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+.lessonButton{
+  margin-bottom: 25px;
+  background-color:#03a9f4;
+  border: 1px;
+  border-radius: 30px;
+  color: white;
+  margin: 5px;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+   font-size: 18px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.2s;
+}
+
+.lessonButton a{
+  color:white;
+}
+
+.lessonHeader{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

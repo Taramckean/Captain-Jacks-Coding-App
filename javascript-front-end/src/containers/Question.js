@@ -1,6 +1,7 @@
 import React from 'react'
 import mockQuestionAnswerData from '../mock_questionAnswerData.js'
 import FunctionContainer from './FunctionContainer'
+import './Question.css';
 
 class Question extends React.Component  {
   constructor(props) {
