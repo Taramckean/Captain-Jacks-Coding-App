@@ -38,18 +38,13 @@ class AnswerButton extends React.Component {
         buttonClicked: false
       })
     }
-<<<<<<< HEAD
-}
-
-=======
   }
->>>>>>> f40139a833e0f13a8a685dc32283c6ad2f4d38d7
+
   render(){
     return(
       <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
-
   )
-}
+  }
 
 
 }
