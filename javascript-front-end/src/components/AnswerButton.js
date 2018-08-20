@@ -13,19 +13,25 @@ class AnswerButton extends React.Component {
 
   renderAnswer(event) {
     if(this.state.buttonClicked === false){
-    let list = document.getElementById("matching-answers");
-    let matchingAnswer = document.createElement('li');
-    matchingAnswer.innerText = event.target.innerText;
-    list.appendChild(matchingAnswer);
-    this.setState({
-      buttonClicked: true
-    })
-  console.log("it made an li")}
+
+      let list = document.getElementById("matching-answers");
+      let matchingAnswer = document.createElement('li');
+      matchingAnswer.innerText = event.target.innerText;
+
+      matchingAnswer.setAttribute("id", matchingAnswer.innerText);
+
+      list.appendChild(matchingAnswer);
+      this.setState({
+        buttonClicked: true
+      })
+      console.log("it made an li")}
+
     else{
-      //get the specifc li created by the specific button click
-      let selectedAnswer = document.getElementById('')
-      //clear the li
-      selectedAnswer.innerText = " ";
+
+      let list = document.getElementById("matching-answers");
+      let selectedAnswer = document.getElementById(event.target.innerText)
+      list.removeChild(selectedAnswer);
+
       this.setState({
         buttonClicked:false
       })
@@ -34,8 +40,8 @@ class AnswerButton extends React.Component {
   }
 
   render(){
-  return(
-  <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
+    return(
+      <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
   )
 }
 }
