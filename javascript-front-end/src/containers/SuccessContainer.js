@@ -6,7 +6,7 @@ const SuccessContainer = () => {
         <div className="success">
           <div className="successHeader">
           <h1>Congratulations!</h1>
-          <h3 className="congratsH3">You have now sailed the seven seas of coding, watch this video!</h3>
+          <h3 className="congratsH3">You have now sailed the Seven Seas of Code, watch this video!</h3>
         </div>
         <div className="successVideo">
           <video src="Success.m4v" controls/>
