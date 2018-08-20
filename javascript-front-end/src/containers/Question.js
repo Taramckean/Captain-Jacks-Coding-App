@@ -1,11 +1,12 @@
 import React from 'react'
 import mockQuestionAnswerData from '../mock_questionAnswerData.js'
+import FunctionContainer from './FunctionContainer'
 
 class Question extends React.Component  {
   constructor(props) {
     super(props);
     this.state = {
-      story: mockQuestionAnswerData
+      story: mockQuestionAnswerData[0]
     }
   }
 
@@ -32,10 +33,10 @@ class Question extends React.Component  {
       <div id="story-view">
         <p id="story">{this.state.story.story}</p>
       </div>
-      {/* { <FunctionContainer />
-      <OutputContainer/>
+       <FunctionContainer />
+      {/* <OutputContainer/>
       <SubmitButton/>
-      <ResultBox/> */}
+      <ResultBox/>} */}
      </React.Fragment>
     );
   }

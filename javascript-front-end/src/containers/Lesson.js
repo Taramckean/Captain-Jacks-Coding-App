@@ -24,7 +24,7 @@ class Lesson extends React.Component {
   // }
 
   render(){
-    if(this.state.topic){
+    if(!this.state.topic){
       return null;
     }
     return (
