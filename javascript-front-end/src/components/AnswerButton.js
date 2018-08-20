@@ -1,7 +1,6 @@
 import React from 'react';
 // import mockQuestionAnswerData from '../mock_questionAnswerData.js'
 
-
 class AnswerButton extends React.Component {
   constructor(props) {
     super(props)
@@ -9,14 +8,10 @@ class AnswerButton extends React.Component {
       buttonClicked: false
     }
     this.renderAnswer = this.renderAnswer.bind(this);
-    // console.log(props.buttonText);
-    // console.log(props.functionOrder);
   }
 
   renderAnswer(event) {
-
     if(this.state.buttonClicked === false){
-
       let list = document.getElementById("matching-answers");
       let matchingAnswer = document.createElement('li');
       matchingAnswer.innerText = event.target.innerText;
@@ -26,36 +21,29 @@ class AnswerButton extends React.Component {
       this.setState({
         buttonClicked: true
       })
-
-
-      var listItem = list.getElementsByTagName("li");
-
+      const listItem = list.getElementsByTagName("li");
       for (var i=0; i < listItem.length; i++) {
-        console.log("title:" + listItem[i].title );
-        console.log("i:" + i );
         if(parseInt(listItem[i].title) === i){
-          console.log('here');
           listItem[i].style.background = "green";
-          // let answer = document.getElementByTitle(i)
-          // answer.style.background = "lightgreen";
         }else {
           listItem[i].style.background = "red";
-          // answer.style.background = "red";
         }
       }
     }
     else{
-
       let list = document.getElementById("matching-answers");
       let selectedAnswer = document.getElementById(event.target.innerText)
       list.removeChild(selectedAnswer);
       this.setState({
         buttonClicked: false
       })
-
     }
+<<<<<<< HEAD
 }
 
+=======
+  }
+>>>>>>> f40139a833e0f13a8a685dc32283c6ad2f4d38d7
   render(){
     return(
       <button onClick={this.renderAnswer}>{this.props.buttonText}</button>

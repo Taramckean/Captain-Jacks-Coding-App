@@ -1,5 +1,6 @@
 import React from 'react'
 import Question from './Question.js'
+import RunButton from '../components/RunButton.js'
 import './Lesson.css';
 import ClearAllButton from '../components/ClearAllButton'
 
@@ -38,6 +39,7 @@ class Lesson extends React.Component {
       </div>
       <Question lesson={this.state.lesson}/>
       <ClearAllButton/>
+      <RunButton/>
       </React.Fragment>
     );
   }
