@@ -19,7 +19,7 @@ const mockQuestionAnswerData =
 
     answers: ['function addGoldCoins(CaptainJacksGold, PirateJoesGold){', 'return CaptainJacksGold + PirateJoesGold', 'addGoldCoins(6, 7)'],
 
-    story: "After landing on Passion Island "
+    story: "After landing on OopyLoopy Island "
   }]
 
 export default mockQuestionAnswerData;
