@@ -1,6 +1,6 @@
 import React from 'react'
 import Question from './Question.js'
-
+import './Lesson.css';
 
 class Lesson extends React.Component {
   constructor(props) {
