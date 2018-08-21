@@ -7,7 +7,7 @@ import RunButton from '../components/RunButton.js'
 const SelectedAnswer = (props) =>
   props.isCorrect(props.text, props.index) ?
     (<li style={{backgroundColor: 'green'}}>{props.text}></li>) :
-    (<li style={{backgroundColor:'red'}}>{props.text}></li>);
+    (<li style={{backgroundColor:'rgb(255, 96, 96'}}>{props.text}></li>);
 
 class FunctionContainer extends React.Component {
   constructor(props) {
@@ -26,8 +26,13 @@ class FunctionContainer extends React.Component {
   }
 
   handleNext() {
-    this.setState({ userSelectedAnswers: [], showRunOutput: null });
-    this.props.nextHandler();
+    const runChecked = this.state.runOutput === this.props.resultOutput
+    console.log(runChecked);
+    if (this.hasGotQuestionCorrect() && runChecked) {
+      this.setState({ userSelectedAnswers: [], showRunOutput: null });
+      this.props.nextHandler();
+    }
+    return;
   }
 
 
@@ -38,9 +43,18 @@ class FunctionContainer extends React.Component {
 
   selectAnswer(event) {
     const selectedAnswer = event.target.innerText;
-    return this.setState((prevState) => ({
-      userSelectedAnswers: [...prevState.userSelectedAnswers, selectedAnswer]
-    }));
+    const answerState = this.state.userSelectedAnswers
+    if (answerState.includes(selectedAnswer)) {
+      const answerRemover = answerState.indexOf(selectedAnswer)
+      const removedAnswerArray = answerState.splice(answerRemover, 1)
+      return this.setState((prevState) => ({
+        userSelectedAnswers: [...prevState.userSelectedAnswers]
+      }))
+    }else {
+      return this.setState((prevState) => ({
+        userSelectedAnswers: [...prevState.userSelectedAnswers, selectedAnswer]
+      }));
+    }
   }
 
   hasGotQuestionCorrect() {
@@ -59,7 +73,7 @@ class FunctionContainer extends React.Component {
     return this.props.functionLines[position] == suggestedAnswer;
   }
 
-  render(){
+  render() {
     const answerParts = this.props.functionLines.map((answerPart, index) =>
       <li key={index}>
         <button onClick={this.selectAnswer}>{answerPart}</button>
@@ -71,20 +85,20 @@ class FunctionContainer extends React.Component {
           <ul  className="answer-box-column" id="shuffled-answers">
             {_.shuffle(answerParts)}
           </ul>
+          <button onClick={this.checkInput}>Click here to run</button>
+        </div>
 
           <div className='answer-box-column'>
             <ul id="matching-answers">
               {this.state.userSelectedAnswers.map((answer, index) =>
                 <SelectedAnswer key={index} index={index} text={answer} isCorrect={this.isCorrectPosition} />)}
             </ul>
-            <button onClick={this.checkInput}>Click here to run</button>
             {this.state.showRunOutput ? <p>{this.state.runOutput}</p> : <p></p>}
           </div>
 
-        </div>
         <div className="button-box">
-          <button onClick={this.handlePrevious}>Previous</button>
-          <button onClick={this.handleNext}>Next</button>
+          <button disabled={!this.hasGotQuestionCorrect()} onClick={this.handlePrevious}>Previous</button>
+          <button disabled={!this.hasGotQuestionCorrect()} onClick={this.handleNext}>Next</button>
         </div>
       </React.Fragment>
     );

@@ -16,7 +16,7 @@ class RunButton extends React.Component  {
     const result = document.getElementById("function-result");
     console.log(list.length);
     for (var i=0; i < listItem.length; i++) {
-      if(listItem[i].style.background === "rgb(255, 96, 96)"){
+      if(listItem[i].style.background === ")"){
         result.innerHTML = "Your a star, but your also wrong."
         return;
       }
