@@ -15,6 +15,7 @@ class Question extends React.Component  {
       clearAnswerList: false
     }
     this.handleNext = this.handleNext.bind(this)
+    this.handlePrevious = this.handlePrevious.bind(this)
   }
 
   handleNext(){
@@ -24,6 +25,18 @@ class Question extends React.Component  {
       clearList: true
     })
   )
+}
+
+handlePrevious(){
+  if(this.state.questionNumber === this.props.lesson.length + 1){
+
+  }
+  this.setState(prevState => ({
+    questionNumber: prevState.questionNumber - 1,
+    questionCompleted: false
+
+  })
+)
 }
 
   render(){
@@ -41,6 +54,7 @@ class Question extends React.Component  {
        <FunctionContainer functionLines={this.props.lesson[this.state.questionNumber].answers} clearList={this.state.clearList} resultOutput={this.props.lesson[this.state.questionNumber].result} />
        <div className="button-box">
          <button onClick={this.handleNext}>Next</button>
+         <button onClick={this.handlePrevious}>Previous</button>
        </div>
        <ResultBox />
      </React.Fragment>
