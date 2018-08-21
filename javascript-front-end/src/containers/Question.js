@@ -6,15 +6,19 @@ class Question extends React.Component  {
   constructor(props) {
     super(props);
     this.state = {
-      questionNumber: 0
+      questionNumber: 0,
+      questionCompleted: false
     }
     this.handleNext = this.handleNext.bind(this)
   }
 
   handleNext(){
+    if (this.state,questionCompleted){
     this.setState(prevState => ({
-      questionNumber: prevState.questionNumber + 1
-    }))
+      questionNumber: prevState.questionNumber + 1,
+      questionCompleted: false
+    }))}
+
   }
 
   render(){
