@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const ResultBox = (props) => {
-  return(
-    <div>
-      <p id='function-result'></p>
-    </div>
-  );
-};
+const ResultBox = props => (
+  <div>
+    <p id="function-result" />
+  </div>
+);
 
 export default ResultBox;

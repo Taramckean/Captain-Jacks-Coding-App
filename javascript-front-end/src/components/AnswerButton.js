@@ -4,52 +4,49 @@ import './AnswerButtonClass.css';
 
 class AnswerButton extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      buttonClicked: false
-    }
+      buttonClicked: false,
+    };
     this.renderAnswer = this.renderAnswer.bind(this);
   }
 
   renderAnswer(event) {
-    const result = document.getElementById("function-result");
+    const result = document.getElementById('function-result');
     // result.innerHTML = ""
-    if(this.state.buttonClicked === false){
-      let list = document.getElementById("matching-answers");
-      let matchingAnswer = document.createElement('li');
+    if (this.state.buttonClicked === false) {
+      const list = document.getElementById('matching-answers');
+      const matchingAnswer = document.createElement('li');
       matchingAnswer.innerText = event.target.innerText;
-      matchingAnswer.setAttribute("id", matchingAnswer.innerText);
-      matchingAnswer.setAttribute("title", this.props.functionOrder);
+      matchingAnswer.setAttribute('id', matchingAnswer.innerText);
+      matchingAnswer.setAttribute('title', this.props.functionOrder);
       list.appendChild(matchingAnswer);
       this.setState({
-        buttonClicked: true
-      })
-      const listItem = list.getElementsByTagName("li");
-      for (var i=0; i < listItem.length; i++) {
-        if(parseInt(listItem[i].title) === i){
-          listItem[i].style.background = "#57d04c";
-        }else {
-          listItem[i].style.background = "#ff6060";
+        buttonClicked: true,
+      });
+      const listItem = list.getElementsByTagName('li');
+      for (let i = 0; i < listItem.length; i++) {
+        if (parseInt(listItem[i].title) === i) {
+          listItem[i].style.background = '#57d04c';
+        } else {
+          listItem[i].style.background = '#ff6060';
         }
       }
-    }
-    else{
-      let list = document.getElementById("matching-answers");
-      let selectedAnswer = document.getElementById(event.target.innerText)
+    } else {
+      const list = document.getElementById('matching-answers');
+      const selectedAnswer = document.getElementById(event.target.innerText);
       list.removeChild(selectedAnswer);
       this.setState({
-        buttonClicked: false
-      })
+        buttonClicked: false,
+      });
     }
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <button className="answerButtonClass" onClick={this.renderAnswer}>{this.props.buttonText}</button>
-  )
+    );
   }
-
-
 }
 
 export default AnswerButton;
