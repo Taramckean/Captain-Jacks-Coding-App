@@ -1,3 +1,15 @@
 ul{
   list-style: none;
 }
+
+
+.answer-box-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+
+.answer-box-column{
+    flex-basis:40%;
+}

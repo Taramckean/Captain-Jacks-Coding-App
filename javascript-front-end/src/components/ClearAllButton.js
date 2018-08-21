@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './ClearAllButton.css';
 
 class ClearAllButton extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ this.handleButtonClear = this.handleButtonClear.bind(this)
     }
 render(){
   return(
-    <button onClick={this.handleButtonClear}> Clear All</button>
+    <button className="clearAll" onClick={this.handleButtonClear}> Clear All</button>
   )
 }
   }

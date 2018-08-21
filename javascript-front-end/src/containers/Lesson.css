@@ -1,4 +1,21 @@
 #topic-view{
   padding-left: 30px;
   padding-right: 30px;
+  margin-top: 20px;
+}
+
+
+.button-box{
+  /* float: right; */
+  margin-bottom: 30px;
+  margin-right: 30px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.lesson-box{
+  margin-left: 70px;
+  margin-right: 70px;
 }
