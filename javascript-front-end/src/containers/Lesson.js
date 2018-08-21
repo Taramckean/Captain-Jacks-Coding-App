@@ -38,7 +38,6 @@ class Lesson extends React.Component {
       <React.Fragment>
         <div className="lesson-box">
       <div id="topic-view">
-        <h1>Question 1</h1>
         <p id="topic">Space for question topic explanation</p>
       </div>
       <Question lesson={this.state.lesson}/>

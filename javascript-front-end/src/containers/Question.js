@@ -33,6 +33,7 @@ class Question extends React.Component  {
     }
     return (
       <React.Fragment>
+        <h1>Question {this.state.questionNumber + 1}</h1>
       <div id="story-view">
         <p id="story">{this.props.lesson[this.state.questionNumber].story}</p>
       </div>
