@@ -2,7 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 import AnswerButton from '../components/AnswerButton'
 import './FunctionContainer.css';
-
+import RunButton from '../components/RunButton.js'
 
 class FunctionContainer extends React.Component {
   constructor(props) {
@@ -34,23 +34,16 @@ class FunctionContainer extends React.Component {
 
     return (
       <React.Fragment>
-      <ul id="shuffled-answers">
-
-      {_.shuffle(answerParts)}
-      </ul>
-
+        <ul id="shuffled-answers">
+          {_.shuffle(answerParts)}
+        </ul>
         <ul id="matching-answers">
 
         </ul>
-
-        </React.Fragment>
+        <RunButton data={answerParts}></RunButton>
+      </React.Fragment>
     );
   }
-
-
   }
-
-// onclick should pass information to the OutputContainer function and render it
-
 
 export default FunctionContainer

@@ -3,6 +3,7 @@ import Question from './Question.js'
 import RunButton from '../components/RunButton.js'
 import './Lesson.css';
 import ClearAllButton from '../components/ClearAllButton'
+import ResultBox from '../components/ResultBox.js';
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Lesson extends React.Component {
     if(!this.state.lesson){
       return null;
     }
+
     return (
       <React.Fragment>
       <div id="topic-view">
@@ -39,11 +41,11 @@ class Lesson extends React.Component {
       </div>
       <Question lesson={this.state.lesson}/>
       <ClearAllButton/>
-      <RunButton/>
+      <ResultBox/>
       </React.Fragment>
     );
-  }
 
+  }
 }
 
 export default Lesson

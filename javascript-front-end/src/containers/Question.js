@@ -10,6 +10,10 @@ class Question extends React.Component  {
     }
   }
 
+  handleNext(event){
+    this.setState()
+  }
+
   render(){
     return (
       <React.Fragment>
@@ -17,13 +21,13 @@ class Question extends React.Component  {
         <p id="story">{this.props.lesson[this.state.questionNumber].story}</p>
       </div>
        <FunctionContainer functionLines={this.props.lesson[this.state.questionNumber].answers} />
+       <button onClick={this.handleNext}>Next</button>
       {/* <OutputContainer/>
       <SubmitButton/>
       <ResultBox/>} */}
      </React.Fragment>
     );
   }
-
 }
 
 export default Question;
