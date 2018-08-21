@@ -5,13 +5,17 @@ video{
   max-height: 350px;
 }
 
-img{
+.home{
+  margin-left: 0;
+  margin-right: 0;
+}
+/* img{
   height: auto;
   width: auto;
   max-width: 400px;
   max-height: 400px;
   padding: 10px 10px 10px;
-}
+} */
 .homeHeading{
   font-size: 40px;
   margin-bottom: 20px;
@@ -39,24 +43,18 @@ margin-top: 10px;
 width: auto; */
 max-width: 700px;
 max-height:700px;
+border: 4px solid #78a3e4;
 }
 
-.orderImages{
+.orderBoxes{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-basis: 45%;
-  object-fit: contain;
+  justify-content: center;
 }
 
-.orderImagesImg{
-  height: auto;
-  width: auto;
-  max-width: 500px;
-  max-height: 500px;
-  padding: 10px 10px 10px;
-  text-align: center;
-  margin-bottom: 20px;
+.orderImagesImg {
+  width: -webkit-fill-available;
 }
 
 .textBox1{
@@ -64,13 +62,15 @@ max-height:700px;
   width: auto;
   max-width: 500px;
   max-height: 500px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 10px 10px 10px;
+  padding: 20px 20px 20px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  margin: 40px 40px 40px;
   text-align: center;
   background-color:#2058d8a3;
   color:white;
   border-radius: 2em;
+      flex-basis: 45%;
 }
 
 .textBox2{
@@ -78,13 +78,15 @@ max-height:700px;
   width: auto;
   max-width: 500px;
   max-height: 500px;
-  padding-left: 10px;
-  padding-right: 10px;
-    margin: 10px 10px 10px;
+    padding: 20px 20px 20px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  margin: 40px 40px 40px;
   text-align: center;
   background-color:#47da17;
   color:white;
   border-radius: 2em;
+      flex-basis: 45%;
 }
 
 
@@ -110,6 +112,11 @@ h4{
   font-weight: normal;
   font-size: 22px;
   padding-top: 10px;
+  line-height: 1.25em;
+}
+
+li{
+  font-size: 18px;
 }
 .homeH4{
   text-align: center;
@@ -131,8 +138,13 @@ button {
   transition-duration: 0.2s;
 
 }
+
+*:focus {
+outline: 0;
+outline: none;
+}
 .footer {
-  position: fixed;
+  position: static;
   right: 0;
   bottom: 0;
   left: 0;

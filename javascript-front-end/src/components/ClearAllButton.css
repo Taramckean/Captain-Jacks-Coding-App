@@ -1,0 +1,21 @@
+.clearAll{
+
+    background-color: black;
+    border: 1px;
+    /* border-radius: 30px; */
+    color: white;
+    margin: 5px;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+     font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.2s;
+
+
+}
+
+.clearAll:hover{
+  text-decoration: underline;
+}

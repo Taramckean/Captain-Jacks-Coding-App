@@ -1,11 +1,30 @@
-.about{
+.row{
   text-align: center;
-  /* padding-top: 15px; */
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+margin-bottom: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
-
-
+.column1{
+  flex-basis: 48%;
+  border-right: 3px dashed #115cce;
+  padding-top: 0;
+  padding-left: 120px;
+  padding-right: 90px;
+   max-width: 420px;
+  text-align: left;
+}
+.column2{
+  flex-basis: 42%;
+    padding-top: 0;
+    padding-left: 30px;
+  margin: 2%;
+}
 .aboutImage{
   height: auto;
   width: auto;
@@ -14,6 +33,12 @@
 }
 
 .aboutHeader{
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.aboutP{
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1.5em;
 }

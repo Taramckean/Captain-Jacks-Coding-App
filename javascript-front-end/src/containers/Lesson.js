@@ -38,8 +38,10 @@ class Lesson extends React.Component {
         <p id="topic">Hello</p>
       </div>
       <Question lesson={this.state.lesson}/>
+      <div className="button-box">
       <ClearAllButton/>
       <RunButton/>
+      </div>
       </React.Fragment>
     );
   }

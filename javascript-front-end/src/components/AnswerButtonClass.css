@@ -1,0 +1,20 @@
+.answerButtonClass{
+    background-color:white;
+    border: 1px black solid;
+    /* border-radius: 30px; */
+    color: black;
+    margin: 5px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+     font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.2s;
+
+  }
+
+  .answerButtonClass:hover{
+    background-color:yellow;
+    /* border:0  px; */
+  }

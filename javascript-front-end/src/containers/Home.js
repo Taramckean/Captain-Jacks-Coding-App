@@ -11,13 +11,13 @@ const Home = () => (
     <div className="introVid">
       <video src="/Intro.m4v" alt="intro video" controls/>
     </div>
-    <div className="orderImages">
-      <div className="orderImagesImg"><img  alt="kids coding" src="kids5.jpg"/></div>
-      <div className="textBox1"><h3>Kids love coding yay! Captain Jack provides engaging, educational fun.</h3></div>
-      <div className="textBox2"><h3>Coding is good for kids yay</h3></div>
-      {/* <div className="orderImagesImg"><img alt="kids on laptops" src="kids4.jpg"/></div> */}
+    <img className="orderImagesImg" alt="kids coding" src="kids5.jpg"/>
+    <div className="orderBoxes">
+      <div className="textBox1"><h3>Captain Jack's App provides engaging, educational fun.
+        You won't have to entertain them if they're coding in JavaScript..</h3></div>
+      <div className="textBox2"><h3>Coding is good for kids yay. Need your computer fixed?
+         Wouldn't it be so much cheaper if your kids knew how to fix it? </h3></div>
     </div>
-
   </div>
 );
 

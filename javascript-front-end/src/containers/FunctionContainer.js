@@ -34,15 +34,15 @@ class FunctionContainer extends React.Component {
 
     return (
       <React.Fragment>
-      <ul id="shuffled-answers">
-
+        <div className="answer-box-row">
+      <ul  className="answer-box-column" id="shuffled-answers">
       {_.shuffle(answerParts)}
       </ul>
 
-        <ul id="matching-answers">
+        <ul className="answer-box-column" id="matching-answers">
 
         </ul>
-
+      </div>
         </React.Fragment>
     );
   }

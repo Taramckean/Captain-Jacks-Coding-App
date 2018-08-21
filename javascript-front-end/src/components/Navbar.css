@@ -2,12 +2,12 @@ nav{
   display: flex;
   flex-direction:column;
   background-color: #ffeb3b  ;
-  position: sticky;
+  position: static;
   width: 100%;
   top:0;
   z-index:10;
   padding-top: 10px;
-/* padding-bottom: px; */
+padding-left: 70px;
 }
 
 nav li{
@@ -27,8 +27,9 @@ nav li a{
 }
 
 nav li a:hover, nav li a:active, nav li a:focus{
-  color:#ffffff;
+  color: white;
   text-decoration: underline;
+  text-shadow: 2px 2px 2px #115cce;
 }
 
 .home{

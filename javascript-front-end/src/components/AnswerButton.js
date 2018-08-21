@@ -1,5 +1,6 @@
 import React from 'react';
 // import mockQuestionAnswerData from '../mock_questionAnswerData.js'
+import './AnswerButtonClass.css';
 
 class AnswerButton extends React.Component {
   constructor(props) {
@@ -24,9 +25,9 @@ class AnswerButton extends React.Component {
       const listItem = list.getElementsByTagName("li");
       for (var i=0; i < listItem.length; i++) {
         if(parseInt(listItem[i].title) === i){
-          listItem[i].style.background = "green";
+          listItem[i].style.background = "#57d04c";
         }else {
-          listItem[i].style.background = "red";
+          listItem[i].style.background = "#ff6060";
         }
       }
     }
@@ -42,7 +43,7 @@ class AnswerButton extends React.Component {
 
   render(){
     return(
-      <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
+      <button className="answerButtonClass" onClick={this.renderAnswer}>{this.props.buttonText}</button>
   )
   }
 

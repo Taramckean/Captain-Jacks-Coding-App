@@ -1,4 +1,5 @@
 import React from 'react'
+import './RunButton.css';
 
 class RunButton extends React.Component  {
   constructor(props) {
@@ -14,7 +15,7 @@ class RunButton extends React.Component  {
 
   render(){
     return(
-      <button onClick={this.runFunction}>Run</button>
+      <button className="run-button" onClick={this.runFunction}>Run</button>
     )
   }
 

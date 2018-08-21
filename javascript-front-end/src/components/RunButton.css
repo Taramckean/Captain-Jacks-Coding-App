@@ -1,0 +1,17 @@
+.run-button{
+  background-color:white;
+  border: 1px black solid;
+  /* border-radius: 30px; */
+  color: black;
+  margin: 5px;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+   font-size: 16px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.2s;
+}
+.run-button:hover{
+  text-decoration: underline;
+}
