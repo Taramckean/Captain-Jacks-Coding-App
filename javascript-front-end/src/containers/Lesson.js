@@ -1,7 +1,7 @@
-import React from 'react'
-import Question from './Question.js'
-import mockLessonData from '../mock_lessonData.js'
-import RunButton from '../components/RunButton.js'
+import React from 'react';
+import mockLessonData from '../mock_lessonData.js';
+import Question from './Question.js';
+import ResultBox from '../components/ResultBox.js';
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -28,17 +28,18 @@ class Lesson extends React.Component {
     if(!this.state.topic){
       return null;
     }
+
     return (
       <React.Fragment>
         <div id="topic-view">
           <p id="topic">{this.state.topic.topic}</p>
         </div>
         <Question/>
-        <RunButton/>
+        <ResultBox/>
       </React.Fragment>
     );
-  }
 
+  }
 }
 
 export default Lesson

@@ -1,6 +1,6 @@
 import React from 'react'
 import mockQuestionAnswerData from '../mock_questionAnswerData.js'
-import FunctionContainer from './FunctionContainer'
+import FunctionContainer from './FunctionContainer.js'
 
 class Question extends React.Component  {
   constructor(props) {
@@ -9,20 +9,6 @@ class Question extends React.Component  {
       story: mockQuestionAnswerData[0]
     }
   }
-
-  // componentDidMount(){
-  //   this.fetchstory()
-  // }
-  // fetchstory(event){
-  //   if(event)
-  //   {
-  //     event.preventDefault();
-  //   }
-  //   // fetch('enter api')
-  //   .then(response => response.json())
-  //   .then(story => this.setState({story: story}));
-  // }
-
 
   render(){
     if(!this.state.story){
@@ -33,14 +19,10 @@ class Question extends React.Component  {
       <div id="story-view">
         <p id="story">{this.state.story.story}</p>
       </div>
-       <FunctionContainer />
-      {/* <OutputContainer/>
-      <SubmitButton/>
-      <ResultBox/>} */}
+      <FunctionContainer/>
      </React.Fragment>
     );
   }
-
 }
 
 export default Question;

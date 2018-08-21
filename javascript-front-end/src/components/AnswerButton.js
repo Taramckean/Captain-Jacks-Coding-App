@@ -11,6 +11,8 @@ class AnswerButton extends React.Component {
   }
 
   renderAnswer(event) {
+    const result = document.getElementById("function-result");
+    result.innerHTML = ""
     if(this.state.buttonClicked === false){
       let list = document.getElementById("matching-answers");
       let matchingAnswer = document.createElement('li');
@@ -42,7 +44,7 @@ class AnswerButton extends React.Component {
   render(){
     return(
       <button onClick={this.renderAnswer}>{this.props.buttonText}</button>
-  )
+    )
 }
 }
 
