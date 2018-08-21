@@ -40,7 +40,9 @@ class Question extends React.Component  {
         <p id="story">{this.props.lesson[this.state.questionNumber].story}</p>
       </div>
        <FunctionContainer functionLines={this.props.lesson[this.state.questionNumber].answers} />
-       <button onClick={this.handleNext}>Next</button>
+       <div className="button-box">
+         <button onClick={this.handleNext}>Next</button>
+       </div>
 
      </React.Fragment>
     );

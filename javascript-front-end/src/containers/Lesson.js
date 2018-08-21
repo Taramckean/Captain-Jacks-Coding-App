@@ -42,9 +42,6 @@ class Lesson extends React.Component {
       </div>
       <Question lesson={this.state.lesson}/>
       </div>
-      <div className="button-box">
-      <ClearAllButton/>
-      </div>
       </React.Fragment>
     );
 
