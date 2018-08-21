@@ -11,8 +11,9 @@ class Question extends React.Component  {
     super(props);
     this.state = {
       questionNumber: 0,
-      questionCompleted: false,
-      clearAnswerList: false
+      selectedAnswers: []
+      // questionCompleted: false,
+      // clearAnswerList: false
     }
     this.handleNext = this.handleNext.bind(this)
     this.handlePrevious = this.handlePrevious.bind(this)
@@ -21,23 +22,21 @@ class Question extends React.Component  {
   handleNext(){
     this.setState(prevState => ({
       questionNumber: prevState.questionNumber + 1,
-      questionCompleted: false,
+      // questionCompleted: false,  // NOTE: This needs to track the state of all questions, not just the current
       clearList: true
     })
   )
-}
-
-handlePrevious(){
-  if(this.state.questionNumber === this.props.lesson.length + 1){
-
   }
-  this.setState(prevState => ({
-    questionNumber: prevState.questionNumber - 1,
-    questionCompleted: false
 
-  })
-)
-}
+  handlePrevious(){
+    if(this.state.questionNumber === 0){
+      return;
+    }
+    return this.setState(prevState => ({
+      questionNumber: prevState.questionNumber - 1,
+      // questionCompleted: false  // NOTE: This needs to track the state of all questions, not just the current
+    }));
+  }
 
   render(){
     if (this.state.questionNumber === this.props.lesson.length) {
@@ -45,17 +44,20 @@ handlePrevious(){
         <Redirect to='/success' />
       )
     }
+
+    const currentQuestion = this.props.lesson[this.state.questionNumber];
     return (
       <React.Fragment>
         <h1>Question {this.state.questionNumber + 1}</h1>
       <div id="story-view">
-        <p id="story">{this.props.lesson[this.state.questionNumber].story}</p>
+        <p id="story">{currentQuestion.story}</p>
       </div>
-       <FunctionContainer functionLines={this.props.lesson[this.state.questionNumber].answers} clearList={this.state.clearList} resultOutput={this.props.lesson[this.state.questionNumber].result} />
-       <div className="button-box">
-         <button onClick={this.handleNext}>Next</button>
-         <button onClick={this.handlePrevious}>Previous</button>
-       </div>
+       <FunctionContainer
+         functionLines={currentQuestion.answers}
+         userSelectedAnswers={this.state.selectedAnswers}
+         resultOutput={currentQuestion.result}
+         nextHandler={this.handleNext}
+         prevHandler={this.handlePrevious}/>
        <ResultBox />
      </React.Fragment>
     );
