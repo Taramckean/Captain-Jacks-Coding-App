@@ -14,13 +14,14 @@ class RunButton extends React.Component  {
     const list = document.getElementById("matching-answers");
     const listItem = list.getElementsByTagName("li");
     const result = document.getElementById("function-result");
+    console.log(list.length);
     for (var i=0; i < listItem.length; i++) {
-      if(listItem[i].style.background === "red"){
+      if(listItem[i].style.background === "rgb(255, 96, 96)"){
         result.innerHTML = "Your a star, but your also wrong."
         return;
       }
       if(i === (this.props.data.length-1)){
-        result.innerHTML = this.props.data.result
+        result.innerHTML = this.props.resultOutput
       }
     }
   }

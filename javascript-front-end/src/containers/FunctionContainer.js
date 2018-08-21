@@ -31,6 +31,9 @@ class FunctionContainer extends React.Component {
   render(){
     const answerParts = this.props.functionLines.map((answerPart, index) => <li key={index}><AnswerButton buttonText={answerPart} functionOrder={index}></AnswerButton></li>)
 
+    // if (this.props.clearList) {
+    //
+    // }
 
     return (
       <React.Fragment>
@@ -43,7 +46,7 @@ class FunctionContainer extends React.Component {
 
         </ul>
       </div>
-      <RunButton data={answerParts}></RunButton>
+      <RunButton data={answerParts} resultOutput = {this.props.resultOutput}></RunButton>
         </React.Fragment>
     );
   }

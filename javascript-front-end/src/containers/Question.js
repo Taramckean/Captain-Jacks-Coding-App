@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import FunctionContainer from './FunctionContainer'
 import SuccessContainer from './SuccessContainer.js'
 import RunButton from '../components/RunButton'
+import ResultBox from '../components/ResultBox.js'
 import './Question.css';
 
 class Question extends React.Component  {
@@ -10,19 +11,17 @@ class Question extends React.Component  {
     super(props);
     this.state = {
       questionNumber: 0,
-      questionCompleted: false
+      questionCompleted: false,
+      clearAnswerList: false
     }
     this.handleNext = this.handleNext.bind(this)
   }
 
   handleNext(){
-    if(this.state.questionNumber === this.props.lesson.length - 1){
-
-    }
     this.setState(prevState => ({
       questionNumber: prevState.questionNumber + 1,
-      questionCompleted: false
-
+      questionCompleted: false,
+      clearList: true
     })
   )
 }
@@ -39,11 +38,11 @@ class Question extends React.Component  {
       <div id="story-view">
         <p id="story">{this.props.lesson[this.state.questionNumber].story}</p>
       </div>
-       <FunctionContainer functionLines={this.props.lesson[this.state.questionNumber].answers} />
+       <FunctionContainer functionLines={this.props.lesson[this.state.questionNumber].answers} clearList={this.state.clearList} resultOutput={this.props.lesson[this.state.questionNumber].result} />
        <div className="button-box">
          <button onClick={this.handleNext}>Next</button>
        </div>
-
+       <ResultBox />
      </React.Fragment>
     );
   }
