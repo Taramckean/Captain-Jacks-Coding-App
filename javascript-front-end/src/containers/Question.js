@@ -1,6 +1,8 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import FunctionContainer from './FunctionContainer'
 import SuccessContainer from './SuccessContainer.js'
+import RunButton from '../components/RunButton'
 import './Question.css';
 
 class Question extends React.Component  {
@@ -28,7 +30,7 @@ class Question extends React.Component  {
   render(){
     if (this.state.questionNumber === this.props.lesson.length) {
       return(
-        <SuccessContainer />
+        <Redirect to='/success' />
       )
     }
     return (

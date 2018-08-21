@@ -44,7 +44,6 @@ class Lesson extends React.Component {
       </div>
       <div className="button-box">
       <ClearAllButton/>
-      <RunButton/>
       </div>
       </React.Fragment>
     );
