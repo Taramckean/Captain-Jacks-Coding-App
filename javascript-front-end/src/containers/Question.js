@@ -8,10 +8,13 @@ class Question extends React.Component  {
     this.state = {
       questionNumber: 0
     }
+    this.handleNext = this.handleNext.bind(this)
   }
 
-  handleNext(event){
-    this.setState()
+  handleNext(){
+    this.setState(prevState => ({
+      questionNumber: prevState.questionNumber + 1
+    }))
   }
 
   render(){
