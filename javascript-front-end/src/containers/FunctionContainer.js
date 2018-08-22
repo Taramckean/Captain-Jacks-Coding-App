@@ -3,6 +3,9 @@ import _ from 'lodash';
 import AnswerButton from '../components/AnswerButton';
 import './FunctionContainer.css';
 import RunButton from '../components/RunButton.js';
+import '../components/RunButton.css'
+import '../components/AnswerButtonClass.css'
+import './Lesson.css'
 
 const SelectedAnswer = props => (props.isCorrect(props.text, props.index)
   ? (
@@ -82,7 +85,7 @@ class FunctionContainer extends React.Component {
   render() {
     const answerParts = this.props.functionLines.map((answerPart, index) => (
       <li key={index}>
-        <button onClick={this.selectAnswer}>{answerPart}</button>
+        <button className='answerButtonClass' onClick={this.selectAnswer}>{answerPart}</button>
       </li>
     ));
     return (
@@ -92,7 +95,7 @@ class FunctionContainer extends React.Component {
           <ul className="answer-box-column" id="shuffled-answers">
             {_.shuffle(answerParts)}
           </ul>
-          <button onClick={this.checkInput}>Click here to run</button>
+          <button className="run-button" onClick={this.checkInput}>Click here to run</button>
         </div>
 
         <div className="answer-box-column">
@@ -103,7 +106,7 @@ class FunctionContainer extends React.Component {
         </div>
 
         <div className="button-box">
-          <button disabled={!this.hasGotQuestionCorrect()} onClick={this.handlePrevious}>Previous</button>
+          <button onClick={this.handlePrevious}>Previous</button>
           <button disabled={!this.hasGotQuestionCorrect()} onClick={this.handleNext}>Next</button>
         </div>
       </React.Fragment>
