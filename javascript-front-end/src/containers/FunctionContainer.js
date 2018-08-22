@@ -7,13 +7,13 @@ import './Lesson.css'
 
 const SelectedAnswer = props => (props.isCorrect(props.text, props.index)
   ? (
-    <li style={{ backgroundColor: 'green' }}>
+    <li style={{ backgroundColor: '#57d04c' }}>
       {props.text}
 >
     </li>
   )
   : (
-    <li style={{ backgroundColor: 'rgb(255, 96, 96' }}>
+    <li style={{ backgroundColor: '#ff6060' }}>
       {props.text}
 >
     </li>
@@ -88,23 +88,27 @@ class FunctionContainer extends React.Component {
     ));
     return (
       <React.Fragment>
-        <div className="answer-box-row">
+        {/* <h1>{this.hasGotQuestionCorrect() ? 'Success!!!' : 'Not there yet :('}</h1> */}
+        <div className="answer-box-row1">
           <ul className="answer-box-column" id="shuffled-answers">
             {_.shuffle(answerParts)}
           </ul>
-          <button className="run-button" onClick={this.checkInput}>Click here to run</button>
-        </div>
 
-        <div className="answer-box-column">
+        <div className="answer-box-column2">
           <ul id="matching-answers">
             {this.state.userSelectedAnswers.map((answer, index) => <SelectedAnswer key={index} index={index} text={answer} isCorrect={this.isCorrectPosition} />)}
           </ul>
-          {this.state.showRunOutput ? <p>{this.state.runOutput}</p> : <p />}
         </div>
-
+        </div>
+        <div className="answer-box-row2">
+          <div className="answer-box-column3">
+            <button className="run-button" onClick={this.checkInput}>Click here to run</button>
+        </div>
+        </div>
+        {this.state.showRunOutput ?<div className="answer-box-row2"><div className="answer-box-column4"><div className="terminal-box"><p className="run-output">{this.state.runOutput}</p> </div></div></div>: <p />}
         <div className="button-box">
-          <button onClick={this.handlePrevious}>Previous</button>
-          <button disabled={!this.hasGotQuestionCorrect()} onClick={this.handleNext}>Next</button>
+          <button className="move-buttons" onClick={this.handlePrevious}>Previous</button>
+          <button className="move-buttons" disabled={!this.hasGotQuestionCorrect()} onClick={this.handleNext}>Next</button>
         </div>
       </React.Fragment>
     );
