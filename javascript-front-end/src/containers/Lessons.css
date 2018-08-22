@@ -1,0 +1,58 @@
+.lesson-list{
+  text-align: center;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.errorVideo{
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom: 0px;
+padding-top:5px;
+margin: auto;
+display: flex;
+justify-content: center;
+margin: auto;
+}
+
+/* a{
+  text-decoration: none;
+} */
+
+.lessonButton{
+  /* margin-bottom: 25px; */
+  background-color:white;
+  color: #115cce;
+  border-radius: 30px;
+  /* margin: 5px; */
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+   font-size: 18px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.2s;
+}
+.lessonButton:hover{
+text-decoration: underline;
+}
+.instructions{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.lessonHeader{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.lessonText{
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.blueBackground{
+  background-color: #afcbf5;
+  padding-bottom: 35px;
+  padding-top: 25px;
+  text-align: center;
+}

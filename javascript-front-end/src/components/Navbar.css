@@ -1,0 +1,40 @@
+nav{
+  display: flex;
+  flex-direction:column;
+  background-color: #ffeb3b  ;
+  position: static;
+  width: 100%;
+  top:0;
+  z-index:10;
+  padding-top: 10px;
+padding-left: 70px;
+}
+
+nav li{
+  display: inline-block;
+  margin-right: 60px;
+  text-transform: full-width;
+  text-decoration: none;
+  font-family: coming soon;
+  font-size: 25px;
+  z-index: 10;
+  font-weight: bold;
+}
+
+nav li a{
+  text-decoration: none;
+    color:#115cce;
+}
+
+nav li a:hover, nav li a:active, nav li a:focus{
+  color: white;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px #115cce;
+  background-color: transparent;
+}
+
+.home{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
