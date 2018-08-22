@@ -72,7 +72,7 @@ class FunctionContainer extends React.Component {
     if (this.hasGotQuestionCorrect()) {
       return this.setState({ showRunOutput: true, runOutput: this.props.resultOutput });
     }
-    return this.setState({ showRunOutput: true, runOutput: 'Your a star! But also wrong. Give it another go :)' });
+    return this.setState({ showRunOutput: true, runOutput: "You're a star! But also wrong. Give it another go :)"});
   }
 
   isCorrectPosition(suggestedAnswer, position) {
