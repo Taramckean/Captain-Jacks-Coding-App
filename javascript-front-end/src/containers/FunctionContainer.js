@@ -33,6 +33,7 @@ class FunctionContainer extends React.Component {
 
     this.handleNext = this.handleNext.bind(this);
     this.handlePrevious = this.handlePrevious.bind(this);
+    this.clearList = this.clearList.bind(this);
   }
 
   handleNext() {
@@ -48,6 +49,10 @@ class FunctionContainer extends React.Component {
   handlePrevious() {
     this.setState({ userSelectedAnswers: [] });
     this.props.prevHandler();
+  }
+
+  clearList(){
+    this.setState({userSelectedAnswers: []})
   }
 
   selectAnswer(event) {
@@ -80,6 +85,10 @@ class FunctionContainer extends React.Component {
     return this.props.functionLines[position] == suggestedAnswer;
   }
 
+  componentDidMount(){
+
+  }
+
   render() {
     const answerParts = this.props.functionLines.map((answerPart, index) => (
       <li key={index}>
@@ -103,6 +112,7 @@ class FunctionContainer extends React.Component {
         <div className="answer-box-row2">
           <div className="answer-box-column3">
             <button className="run-button" onClick={this.checkInput}>Click here to run</button>
+            <button className="run-button" onClick={this.clearList}>Clear All</button>
         </div>
         </div>
         {this.state.showRunOutput ?<div className="answer-box-row2"><div className="answer-box-column4"><div className="terminal-box"><p className="run-output">{this.state.runOutput}</p> </div></div></div>: <p />}
