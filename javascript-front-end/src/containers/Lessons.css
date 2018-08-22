@@ -36,7 +36,10 @@ margin: auto;
 .lessonButton:hover{
 text-decoration: underline;
 }
-
+.instructions{
+  margin-left: 25%;
+  margin-right: 25%;
+}
 
 .lessonHeader{
   margin-top: 20px;
@@ -49,7 +52,7 @@ text-decoration: underline;
 
 .blueBackground{
   background-color: #afcbf5;
-  padding-bottom: 45px;
-  padding-top: 45px;
+  padding-bottom: 35px;
+  padding-top: 25px;
   text-align: center;
 }

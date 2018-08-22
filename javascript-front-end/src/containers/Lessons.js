@@ -16,7 +16,9 @@ Click on Lesson 1 to get started!
     </div>
     <video className="errorVideo" src="/Error.m4v" alt="intro video" controls />
     <div className="blueBackground">
-
+      <p className="instructions">
+     To complete each question, put the function into the correct order by clicking the buttons on the left of the screen. When the function is complete and in the correct order, click ‘Run’.
+   </p>
       <a className="lessonButton" href="/lesson">Click here for Lesson 1</a>
     </div>
   </React.Fragment>
