@@ -9,14 +9,15 @@
 margin-bottom: 40px;
     padding-top: 0px;
     padding-bottom: 0px;
+    /* width: 80%; */
 }
 .column1{
   flex-basis: 48%;
   border-right: 3px dashed #115cce;
   padding-top: 0;
-  padding-left: 120px;
-  padding-right: 90px;
-   max-width: 420px;
+  padding-left: 15%;
+  padding-right: 12%;
+   max-width: 23%;
   text-align: left;
 }
 .column2{
@@ -28,8 +29,8 @@ margin-bottom: 40px;
 .aboutImage{
   height: auto;
   width: auto;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .aboutHeader{
@@ -38,7 +39,7 @@ margin-bottom: 40px;
 }
 
 .aboutP{
-  font-size: 23px;
+  font-size:23px;
   font-style: italic;
   line-height: 1.5em;
 }

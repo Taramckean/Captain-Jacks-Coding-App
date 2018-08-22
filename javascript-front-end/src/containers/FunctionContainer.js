@@ -39,7 +39,7 @@ class FunctionContainer extends React.Component {
       {_.shuffle(answerParts)}
       </ul>
 
-        <ul className="answer-box-column" id="matching-answers">
+        <ul className="answer-box-column2" id="matching-answers">
 
         </ul>
       </div>

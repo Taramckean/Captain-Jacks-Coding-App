@@ -20,6 +20,6 @@
   }
 
   .answerButtonClass:active, :focus{
-    /* text-decoration: underline; */
-      background-color:yellow;
+    text-decoration: underline;
+      /* background-color:yellow; */
   }

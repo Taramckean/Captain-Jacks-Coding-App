@@ -16,13 +16,15 @@ class Question extends React.Component  {
   handleNext(){
     if(this.state.questionNumber === this.props.lesson.length - 1){
 
-    }
+    }let listItems = document.getElementsByTagName("li");
+    listItems.setState({buttonClicked: false});
     this.setState(prevState => ({
       questionNumber: prevState.questionNumber + 1,
       questionCompleted: false
+    }),
 
-    })
-  )
+  );
+
 }
 
   render(){
