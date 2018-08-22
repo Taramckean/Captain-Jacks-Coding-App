@@ -15,7 +15,8 @@ In third terminal window navigate to Javascript-front-end folder
 ### Javascript-front-end
 
 1. In terminal window 3: `npm install`
-2. In terminal window 3: `npm start`
+2. In terminal window 3: `npm install --dev eslint`
+3. In terminal window 3: `npm start`
 
 ### Localhost Information
 Route information can be found in the Javascript-back-end folder in the server.js file.
