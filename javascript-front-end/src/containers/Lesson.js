@@ -1,8 +1,6 @@
 import React from 'react';
 import Question from './Question.js';
-import RunButton from '../components/RunButton.js';
 import './Lesson.css';
-import ClearAllButton from '../components/ClearAllButton';
 import ResultBox from '../components/ResultBox.js';
 
 class Lesson extends React.Component {
@@ -36,7 +34,7 @@ class Lesson extends React.Component {
       <React.Fragment>
         <div className="lesson-box">
           <div id="topic-view">
-            <p id="topic">Space for question topic explanation</p>
+            <p id="topic">{this.state.lesson.learning}</p>
           </div>
           <Question lesson={this.state.lesson} />
         </div>

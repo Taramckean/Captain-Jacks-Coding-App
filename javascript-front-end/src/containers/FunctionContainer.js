@@ -1,8 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import AnswerButton from '../components/AnswerButton';
 import './FunctionContainer.css';
-import RunButton from '../components/RunButton.js';
 import '../components/RunButton.css'
 import '../components/AnswerButtonClass.css'
 import './Lesson.css'
@@ -90,7 +88,6 @@ class FunctionContainer extends React.Component {
     ));
     return (
       <React.Fragment>
-        {/* <h1>{this.hasGotQuestionCorrect() ? 'Success!!!' : 'Not there yet :('}</h1> */}
         <div className="answer-box-row">
           <ul className="answer-box-column" id="shuffled-answers">
             {_.shuffle(answerParts)}

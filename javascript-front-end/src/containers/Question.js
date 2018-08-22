@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import FunctionContainer from './FunctionContainer';
 import SuccessContainer from './SuccessContainer.js';
-import RunButton from '../components/RunButton';
 import ResultBox from '../components/ResultBox.js';
 import './Question.css';
 
@@ -52,12 +51,15 @@ Question
           {this.state.questionNumber + 1}
         </h1>
         <div id="story-view">
+          <p id="learning">{currentQuestion.learning}</p>
           <p id="story">{currentQuestion.story}</p>
+          <p id="question">{currentQuestion.question}</p>
         </div>
         <FunctionContainer
           functionLines={currentQuestion.answers}
           userSelectedAnswers={this.state.selectedAnswers}
           resultOutput={currentQuestion.result}
+          learning={currentQuestion.learning}
           nextHandler={this.handleNext}
           prevHandler={this.handlePrevious}
         />
