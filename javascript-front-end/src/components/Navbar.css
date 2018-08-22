@@ -30,6 +30,7 @@ nav li a:hover, nav li a:active, nav li a:focus{
   color: white;
   text-decoration: underline;
   text-shadow: 2px 2px 2px #115cce;
+  background-color: transparent;
 }
 
 .home{
